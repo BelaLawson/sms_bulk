@@ -9,10 +9,10 @@ export default {
     }
   },
   methods: {
-    increment() {
+    async increment() {
       try {
-        const result = fetch(
-          `http://192.168.0.17/rapisms/api/scheduled/`,{method:'POST', mode: 'no-cors', headers: {'X_API_KEY': '0cb56244268fac41109d34097af5354b','Accept': 'application/json','Content-Type': 'application/json'},body:"{'text':'testfromAPI','groups[]':'1'}"}
+        const result = await fetch(
+          `http://192.168.0.17/raspisms/api/scheduled/`,{method:'POST', mode: 'cors',cache: 'no-cache',credentials: 'same-origin', headers: {'X-Api-Key': '98caa922901991664a0482d772f056cc','Accept': 'application/json','Content-Type': 'application/json', 'text':"44jjjnf",'groups':'1'}, body: JSON.stringify({text:"testfromAPI",groups:"1"})}
         )
         if (result.status === 200) {
           const body = result.json()
