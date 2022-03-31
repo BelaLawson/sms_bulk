@@ -12,7 +12,7 @@ export default {
     increment() {
       try {
         const result = fetch(
-          `https://app.raspisms.fr/api/scheduled/`,{method:'POST',headers: {'Api-Key': '0cb56244268fac41109d34097af5354b'},body:"{'text':'testfromAPI','groups[]':'1'}"}
+          `https://app.raspisms.fr/api/scheduled/`,{method:'POST', mode: 'no-cors',headers: {'x-api-key': '0cb56244268fac41109d34097af5354b','Accept': 'application/json','Content-Type': 'application/json'},body:"{'text':'testfromAPI','groups[]':'1'}"}
         )
         if (result.status === 200) {
           const body = result.json()
