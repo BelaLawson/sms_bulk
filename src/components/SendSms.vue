@@ -12,7 +12,7 @@ export default {
     async increment() {
       try {
         const result = await fetch(
-          `http://192.168.0.17/raspisms/api/scheduled/`,{method:'POST', mode: 'cors',cache: 'no-cache',credentials: 'same-origin', headers: {'X-Api-Key': '98caa922901991664a0482d772f056cc','Accept': 'application/json','Content-Type': 'application/json', 'text':"44jjjnf",'groups':'1'}, body: JSON.stringify({text:"testfromAPI",groups:"1"})}
+          `/raspismsyo`,{method:'POST', mode: 'cors', headers: {'X-Api-Key': '98caa922901991664a0482d772f056cc','Accept': 'application/json','Content-Type': 'application/json', 'text':"44jjjnf",'groups':'1'}, body: JSON.stringify({text:"testfromAPI",groups:"1"})}
         )
         if (result.status === 200) {
           const body = result.json()

@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/raspismsyo*"
+  to = "http://192.168.0.17/raspisms/api/scheduled/"
+  status = 200
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
